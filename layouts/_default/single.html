@@ -43,12 +43,12 @@
       {{- .Content -}}
       {{- partial "tags.html" . -}}
       <div class="mt6">
-      {{ if .Site.DisqusShortname }}
+      <!-- {{ if .Site.DisqusShortname }}
         {{ template "_internal/disqus.html" . }}
       {{ end }}
       {{ if .Site.Params.commentoEnable }}
         {{- partial "commento.html" . -}}
-      {{ end }}
+      {{ end }} -->
       </div>
     </section>
 
