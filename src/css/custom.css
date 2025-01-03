@@ -200,3 +200,28 @@ a:hover {
     font-size: 1rem;
   }
 }
+
+/* Tag List Styles */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows tags to wrap to the next line if there's not enough space */
+  gap: 1rem; /* Space between tags */
+  margin-top: 1rem; /* Space between tags and content */
+}
+
+.tag-item {
+  background-color: #e1e8f0; /* Light gray background for each tag */
+  color: #333; /* Dark text for readability */
+  border-radius: 20px; /* Rounded corners for each tag */
+  padding: 0.5rem 1rem; /* Padding inside each tag */
+  font-size: 0.9rem; /* Smaller font size for tags */
+  font-weight: 600; /* Bold text for tags */
+  text-transform: capitalize; /* Capitalize tag text */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tag-item:hover {
+  background-color: #2a6f9e; /* Darker blue when hovered */
+  color: white; /* White text on hover */
+  transform: scale(1.05); /* Slight scaling effect on hover */
+}
