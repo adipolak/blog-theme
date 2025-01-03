@@ -1,18 +1,36 @@
 {{ define "main" }}
-  <article class="pa3 pa4-ns nested-copy-line-height nested-img">
-    <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-      {{- .Content -}}
-    </section>
-    {{ if false }}
-    {{/* Disables any appended content list after the main content */}}
-    <section class="flex-ns flex-wrap justify-around mt5">
-      {{ range .Paginator.Pages }}
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          {{- partial "summary.html" . -}}
-        </div>
-      {{ end }}
-    </section>
-    {{- template "_internal/pagination.html" . -}}
+<div class="layout mw8 center ph3 flex-l">
+  <!-- Sidebar -->
+  <!-- <aside class="sidebar bg-light-gray pa3 w-25-l">
+    <nav>
+      <h2 class="f4">Blog Navigator</h2>
+      <ul class="list pl0">
+        {{ range .Site.RegularPages }}
+        <li class="mb2">
+          <a href="{{ .Permalink }}" class="link dim blue">{{ .Title }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </aside> -->
+
+  <!-- Main Content -->
+  <div class="content flex-auto">
+    <section class="blog-list">
+  <h1 class="f3 tc">Latest Blogs</h1>
+  <div class="blog-container">
+    {{ range .Pages }}
+    <div class="blog-entry">
+      <h2 class="f4">
+        <a href="{{ .Permalink }}" class="link dim">{{ .Title }}</a>
+      </h2>
+      <p class="f6 mv2">{{ .Date.Format "January 2, 2006" }}</p>
+      <p>{{ .Summary }}</p>
+    </div>
     {{ end }}
-  </article>
+  </div>
+</section>
+
+  </div>
+</div>
 {{ end }}
