@@ -6,7 +6,7 @@
   <!-- Fetch and Display Posts -->
   {{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
   {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
-  {{ $section = where $section "Draft" "not" true }} <!-- Exclude draft posts -->
+  {{ $section = where $section "Draft" "ne" true }} <!-- Exclude draft posts -->
   {{ $section_count := len $section }}
   {{ if ge $section_count 1 }}
     <div class="blog-list pa3 pa4-ns w-100 center">
