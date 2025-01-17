@@ -2,9 +2,9 @@
   <div class="flex-l justify-between items-center center">
     <a href="{{ if eq hugo.Environment "development" }}http://localhost:1313/{{ else }}{{ .Site.BaseURL }}{{ end }}" class="f3 fw2 hover-white no-underline white-90 dib header-logo-wrapper">
       
-      <!-- <p>Environment: {{ hugo.Environment }}</p>
+      <p>Environment: {{ hugo.Environment }}</p>
       <p> base: {{.Site.BaseURL }}</p>
-      <p> base: {{ .Site.BaseURL }}</p> -->
+      <p> base: {{ .Site.BaseURL }}</p>
       
       
       <img src="/assets/favicon/favicon-32x32.png" class="header-logo" />
